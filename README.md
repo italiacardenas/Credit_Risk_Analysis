@@ -25,7 +25,7 @@ F1 Score: 25 of high_risk predictions were correct, while 81% of low_risk predic
 
 Imbalanced Classification Report 
 
-<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/paid_reviews.png"> 
+<img src="https://github.com/italiacardenas/Credit_Risk_Analysis/blob/3895213a7712091f7212aac475185da00ee43efc/Module-17-Challenge-Resources/screenshots/random_oversample.png"> 
 
 
 ### Oversample the data using SMOTE 
@@ -35,7 +35,7 @@ Recall: 63% of high_risk (lower than RandomOverSample) cases were caught and 66%
 F1 Score: 2% of high_risk predictions were correct, while 79% (higher than RandomOverSample) of low_risk predictions were correct.
 
 <br>
-<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
+<img src="https://github.com/italiacardenas/Credit_Risk_Analysis/blob/3895213a7712091f7212aac475185da00ee43efc/Module-17-Challenge-Resources/screenshots/smote_oversample.png"> 
 
 ### Undersampling 
 Balanced Accuracy Score: 0.51
@@ -44,7 +44,7 @@ Recall: 59% of high_risk cases were caught and 44% of low_risk.
 F1 Score: 1% of high_risk predictions were correct, while 61% of low_risk predictions were correct.
 
 <br>
-<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
+<img src="https://github.com/italiacardenas/Credit_Risk_Analysis/blob/3895213a7712091f7212aac475185da00ee43efc/Module-17-Challenge-Resources/screenshots/undersample.png"> 
 
 ### Combination (Over and Under) Sampling
 Balanced Accuracy Score: 0.64
@@ -53,7 +53,7 @@ Recall: 71% of high_risk cases were caught and 56% of low_risk.
 F1 Score: 2% of high_risk predictions were correct, while 72% of low_risk predictions were correct.
 
 <br>
-<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
+<img src="https://github.com/italiacardenas/Credit_Risk_Analysis/blob/3895213a7712091f7212aac475185da00ee43efc/Module-17-Challenge-Resources/screenshots/combination.png"> 
 
 
 ## Summary
