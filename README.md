@@ -13,21 +13,48 @@ The algorithms used are listed:
 
 ## Sources
 - LoanStats_2019Q1.csv from Lending Club
-- Python, Anaconda Navigator, Conda, Jupyter Notebook
+- Python, Anaconda Navigator, Conda, Jupyter Notebook, Libraries (imbalanced-learn & scikit-learn)
 
 ## Results
 
-### Vine Book Review Results
-Interestingly enough, Book Reviews were not being made by Vine Members. This means that companies are not looking to pay Vine Members to leave book reviews. 
-<br>
+### Oversample the data using RandomOverSampler
+Balanced Accuracy Score: 0.65
+Precision: high_risk is .01 this means that only 1% of the predictions for high risk were correct, while 100% of low_risk were correct. 
+Recall: 62% of high_risk cases were caught and 68% of low_risk.
+F1 Score: 25 of high_risk predictions were correct, while 81% of low_risk predictions were correct.
+
+Imbalanced Classification Report 
+
 <img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/paid_reviews.png"> 
 
 
-### Unpaid Book Reviews Results
-Books Reviews were solely written by unpaid shoppers. Out of 40,387 reviews left, 60% of them were 5-star reviews. This means that the majority of 5-star reviews were left organically and not influenced by a pay. It also means that Amazon has a great book selection that shopeprs are genuinely enjoying.
+### Oversample the data using SMOTE 
+Balanced Accuracy Score: 0.64
+Precision: high_risk is .01 this means that only 1% of the predictions for high risk were correct, while 100% of low_risk were correct. 
+Recall: 63% of high_risk (lower than RandomOverSample) cases were caught and 66% (higher than RandomOverSample) of low_risk.
+F1 Score: 2% of high_risk predictions were correct, while 79% (higher than RandomOverSample) of low_risk predictions were correct.
+
+<br>
+<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
+
+### Undersampling 
+Balanced Accuracy Score: 0.51
+Precision: high_risk is .01 this means that only 1% of the predictions for high risk were correct, while 100% of low_risk were correct. 
+Recall: 59% of high_risk cases were caught and 44% of low_risk.
+F1 Score: 1% of high_risk predictions were correct, while 61% of low_risk predictions were correct.
+
+<br>
+<img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
+
+### Combination (Over and Under) Sampling
+Balanced Accuracy Score: 0.64
+Precision: high_risk is .01 this means that only 1% of the predictions for high risk were correct, while 100% of low_risk were correct. 
+Recall: 71% of high_risk cases were caught and 56% of low_risk.
+F1 Score: 2% of high_risk predictions were correct, while 72% of low_risk predictions were correct.
+
 <br>
 <img src="https://github.com/italiacardenas/Amazon_Vine_Analysis/blob/5408c4ab8ef5cdb0886cf6f9231c4f7600f2e12b/Module16_Challenge/Screenshots/unpaid_reviews.png"> 
 
 
 ## Summary
-The results suggest that Books are being bought by people who appreciate reading and are probably sticking to the genres they are guaranteed to like. Although 40%of the reviews are unacocunted for, because 60% of the reviews left 5-stars, it is safe to say so. Additionally, 4-star reviews could also be accounted for and combined with the 5-star reviews to determine whether there is a significant amount of positive reviews left for books on Amazon.
+The results suggest the complexity of predicting credit scores. While all models used for the analysis, resulted in rather unremarkable results, the model of Combination of Over and Undersampling had the highest recall percentage for high_risk, 71%. However, there are still 56% low risk credits being detected as high risk which is troubling. I would still recommend using the Combination model over thhe others to be used by businesses to predict credit risk.
